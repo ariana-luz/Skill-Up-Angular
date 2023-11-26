@@ -9,41 +9,41 @@
               <mat-form-field>
                 <input matInput placeholder="Email" formControlName="Email">
                 <mat-error *ngIf="!registerForm.get('email')?.errors?.required && (registerForm.get('email')?.errors?.pattern)">
-                  Please enter a valid email address
+                  Ingrese un correo electrónico válido
                 </mat-error>
                 <mat-error *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched) && registerForm.get('email')?.errors?.required">
-                  Email is required
+                  Correo electrónico requerido
                 </mat-error>
               </mat-form-field>
               <mat-form-field>
                 <input matInput type="password" placeholder="Contraseña" formControlName="password">    
                 <mat-error *ngIf="!registerForm.get('password')?.errors?.required">
-                  Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters
+                  La longitud de la contraseña debe ser mayor o igual a 8 y debe contener uno o más mayúsculas, minúsculas, números y al menos un caracter especial.
                 </mat-error>
                 <mat-error *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched) && registerForm.get('password')?.errors?.required">
-                  Password is required
+                  Contraseña requerida
                 </mat-error>
               </mat-form-field>
               <mat-form-field>
                 <input matInput type="text" placeholder="Nombre" formControlName="firstname">    
                 <mat-error *ngIf="!registerForm.get('firstname')?.errors?.required&& (registerForm.get('firstname')?.dirty || registerForm.get('firstname')?.touched) && registerForm.get('firstname')?.errors?.required">
-                  Name is required
+                  Campo requerido
                 </mat-error>   
               </mat-form-field>
               <mat-form-field>
                 <input matInput type="text" placeholder="Apellido" formControlName="lastname">    
                 <mat-error *ngIf="!registerForm.get('lastname')?.errors?.required&& (registerForm.get('lastname')?.dirty || registerForm.get('lastname')?.touched) && registerForm.get('lastname')?.errors?.required">
-                  Last Name is required
+                  Campo requerido
                 </mat-error>   
               </mat-form-field>
               <div class="checkbox-policy">
                 <mat-checkbox color="primary" formControlName="conditions" ></mat-checkbox>
-                <p>Aceptar terminos de</p> 
-                <a (click)="showPolicyTerms()">Privacidad y politicas</a>
+                <p>Aceptar términos de</p> 
+                <a (click)="showPolicyTerms()">Privacidad y políticas</a>
               </div>
             <button mat-raised-button color="primary" [disabled]="!registerForm.valid" type="submit">
               <mat-spinner [diameter]="30" *ngIf="loading; else logIn" ></mat-spinner>
-              <ng-template #logIn ><p>Crear cuenta</p></ng-template>
+              <ng-template #logIn><p>Crear cuenta</p></ng-template>
             </button>
         </form>
       </mat-card-content>

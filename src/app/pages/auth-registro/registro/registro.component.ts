@@ -24,7 +24,7 @@ export class RegistroComponent implements OnInit, OnDestroy {
   loading = false;
   title = 'Register';
   conditions = new FormControl(false, Validators.requiredTrue);
-  conditionsText = "While using our Site, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to your name ('Personal Information')."
+  conditionsText = "Al utilizar nuestro sitio, es posible que le solicitemos cierta información de identificación personal que pueda usarse para contactarlo o identificarlo ('Información personal')."
   httpService: Subscription = new Subscription;
 
   constructor(

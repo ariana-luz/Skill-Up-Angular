@@ -9,10 +9,10 @@
             <mat-form-field>
               <input matInput placeholder="Email" formControlName="email">
               <mat-error *ngIf="!loginForm.get('email')?.errors?.required && (loginForm.get('email')?.errors?.pattern)">
-                Please enter a valid email address
+                Ingrese un correo electrónico válido
               </mat-error>
               <mat-error *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) && loginForm.get('email')?.errors?.required">
-                Email is required
+                Correo electrónico requerido
               </mat-error>
             </mat-form-field>
             <mat-form-field>
@@ -21,10 +21,10 @@
                 {{showPassword?'visibility_off':'visibility'}}
               </mat-icon>
               <mat-error *ngIf="!loginForm.get('password')?.errors?.required">
-                Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters
+                La longitud de la contraseña debe ser mayor o igual a 8 y debe contener uno o más mayúsculas, minúsculas, números y al menos un caracter especial.
               </mat-error>
               <mat-error *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) && loginForm.get('password')?.errors?.required">
-                Password is required
+                Contraseña requerida
               </mat-error>
             </mat-form-field>
             <button mat-raised-button color="primary" [disabled]="!loginForm.valid" type="submit">
@@ -34,7 +34,7 @@
     
             <div class="active">
                 <a class="nav-link active" routerLink="/auth/reset" >
-                  Reiniciar contraseña
+                  Reestablecer contraseña
                 </a>
             </div>
         </form>
